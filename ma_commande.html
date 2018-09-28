@@ -34,7 +34,7 @@
 				</li>
 				<li>
 					<figure>
-						<a href="article2.html"><img src="No.png" alt="placeholder image 2"> <!--image ne s'affiche pas!-->
+						<a href="article2.html"><img src="assets/No.png" alt="placeholder image 2"> <!--image ne s'affiche pas!-->
 							<figcaption>placeholder description 2</figcaption></a>
 					</figure>
 				</li>
@@ -43,15 +43,16 @@
 			<h2>Mes coordonnées</h2>
 
 			<div id="formulaire">
-				<!--différentes infos qu'on demande pour finaliser la commande!-->
-				<label for="prenom">Prénom: </label>
-				<input type="text" name="" id="prenom" placeholder="Martin" />
-				<label for="nom">Nom: </label>
-				<input type="text" name="" id="nom" placeholder="Dupont" />
-				<label for="adresse">Adresse (numéro, rue, ville): </label>
-				<input type="text" name="" id="adresse" placeholder="20 rue des champs Élysées" />
-				<label for="pays">Pays: </label>
-				<select id="pays" >
+				<form>
+					<!--différentes infos qu'on demande pour finaliser la commande!-->
+					<label for="prenom">Prénom: </label>
+					<input type="text" name="prenom" id="prenom" placeholder="Martin" />
+					<label for="nom">Nom: </label>
+					<input type="text" name="nom" id="nom" placeholder="Dupont" />
+					<label for="adresse">Adresse (numéro, rue, ville): </label>
+					<input type="text" name="adresse" id="adresse" placeholder="20 rue des champs Élysées" />
+					<label for="pays">Pays: </label>
+					<select id="pays" >
 					<option value="AF">Afghanistan</option>
 					<option value="AX">Åland Islands</option>
 					<option value="AL">Albania</option>
@@ -301,14 +302,15 @@
 					<option value="YE">Yemen</option>
 					<option value="ZM">Zambia</option>
 					<option value="ZW">Zimbabwe</option>
-				</select value="">
-				<label for="telephone">Téléphone: </label>
-				<input type="text" name="" id="telephone" placeholder="01.23.45.78.90" />
-				<label for="email">Email: </label>
-				<input type="email" name="" id="email" placeholder="machin@chose.com" />
+					</select value="">
+					<label for="telephone">Téléphone: </label>
+					<input type="text" name="telephone" id="telephone" placeholder="01.23.45.78.90" />
+					<label for="email">Email: </label>
+					<input type="email" name="email" id="email" placeholder="machin@chose.com" />
 
-				<!--<input type="reset" name="" />!--> <!--reset de marche pas!-->
-				<input type="button" name="" value="Valider" onclick="alert('votre commande a été transmise, merci d\'avoir utilisé Generic Shop')">
+					<input type="reset" name="reset" /> <!--reset de marche pas!-->
+					<input type="button" name="valider" value="Valider" onclick="alert('votre commande a été transmise, merci d\'avoir utilisé Generic Shop')">
+				</form>
 			</div>
 
 		</section>
