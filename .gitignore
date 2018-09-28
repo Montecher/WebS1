@@ -1,0 +1,5 @@
+# Local files
+.local/
+
+# Kate swap files
+.*.kate-swp
