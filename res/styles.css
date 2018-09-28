@@ -5,7 +5,7 @@
 
 body > section {
 	display: flex;
-	flex-basis: column;
+	flex-direction: column;
 	width: 100%;
 }
 
@@ -25,16 +25,17 @@ header, footer {
 	list-style-type: none;
 }
 
-#footer {
+footer {
 	display: flex;
+    text-align: center;
 	padding: 20px;
 }
-#footer > section {
-	display: flex;
-	flex-direction: column;
+footer > section {
+	display: inline;
 	padding: 10px;
+    width: 100%;
 }
-#footer > section + section {
+footer > section + section {
 	border-left: 1px solid black;
 }
 
