@@ -21,7 +21,9 @@ header, footer {
 #menu {
 	display: flex;
 	background: #aaffaa;
-	padding: 10px;
+	padding: 5px;
+	vertical-align: middle;
+	text-align: center;
 }
 #menu ul {
 	display: flex;
@@ -30,6 +32,7 @@ header, footer {
 }
 #menu li {
 	padding: 5px;
+	height: 100%;
 }
 #menu li + li {
 	border-left: 1px solid black;
@@ -38,6 +41,7 @@ header, footer {
 	border: 1px solid black;
 	border-radius: 100px; /* to make sure it is bigger than it should */
 	padding: 5px;
+	margin: 5px;
 }
 
 footer {
