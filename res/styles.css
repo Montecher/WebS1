@@ -3,6 +3,10 @@
 	padding: 0;
 }
 
+ul, ol {
+	list-style-type: none;
+}
+
 body > section {
 	display: flex;
 	flex-direction: column;
@@ -17,23 +21,34 @@ header, footer {
 #menu {
 	display: flex;
 	background: #aaffaa;
+	padding: 10px;
 }
 #menu ul {
 	display: flex;
 	width: 100%;
 	height: 100%;
-	list-style-type: none;
+}
+#menu li {
+	padding: 5px;
+}
+#menu li + li {
+	border-left: 1px solid black;
+}
+#menu input[type=search] {
+	border: 1px solid black;
+	border-radius: 100px; /* to make sure it is bigger than it should */
+	padding: 5px;
 }
 
 footer {
 	display: flex;
-    text-align: center;
+	text-align: center;
 	padding: 20px;
 }
 footer > section {
 	display: inline;
 	padding: 10px;
-    width: 100%;
+	width: 100%;
 }
 footer > section + section {
 	border-left: 1px solid black;
