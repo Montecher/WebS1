@@ -47,12 +47,13 @@ header, footer {
 footer {
 	display: flex;
 	text-align: center;
-	padding: 20px;
+	padding: 20px 0;
 }
 footer > section {
-	display: inline;
+	display: inline-flex;
+	flex-direction: column;
 	padding: 10px;
-	width: 100%;
+	width: 50%;
 }
 footer > section + section {
 	border-left: 1px solid black;
