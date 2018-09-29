@@ -38,6 +38,19 @@ p a {
 	font-size: italic;
 }
 
+/* Define text class
+ * This is used to flag objects to be displayed as text
+ */
+ul.text, ol.text {
+	padding-left: 20px;
+}
+ul.text {
+	list-style-type: disc;
+}
+ol.text {
+	list-style-type: decimal;
+}
+
 /* Set document size and base layout */
 body > div {
 	display: flex;
