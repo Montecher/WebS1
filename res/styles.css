@@ -1,10 +1,17 @@
 @import url('https://fonts.googleapis.com/css?family=Open+Sans:700');
 
+/* Remove all default margins and paddings
+ * This is important, because margins and paddings vary.
+ * That way, we can define margins and paddings ourselves.
+ */
 * {
 	margin: 0;
 	padding: 0;
 }
 
+/* Redefine default styles for common elements
+ * The default values are either ugly or don't work for our purpose.
+ */
 a {
 	text-decoration: none;
 	color: #224422;
@@ -23,20 +30,25 @@ h2 {
 	font-size: 12pt;
 }
 
+/* Set document size and base layout */
 body > div {
 	display: flex;
 	flex-direction: column;
 	width: 100%;
 }
-
 header, footer {
 	width: 100%;
-	background: #ffaaff;
+	background: #ffaaff; /*TODO use some real colors */
 }
 
+/* Create a nice menu
+ * On desktop, the items are on the left, and the search bar is on the right.
+ * Menu items are separated by a black line.
+ * The search bar is rounded manually and has a visual cue when focused.
+ */
 #menu {
 	display: flex;
-	background: #aaffaa;
+	background: #aaffaa; /*TODO use some real colors */
 	padding: 5px;
 	align-items: center;
 	text-align: center;
@@ -58,8 +70,16 @@ header, footer {
 	border-radius: 100px; /* to make sure it is bigger than it should */
 	padding: 5px;
 	margin: 5px;
+	outline: none;
+}
+#menu input[type=search]:focus {
+	border: 1px solid blue;
 }
 
+/* Create a nice footer
+ * On desktop, the elements are organised vertically inside sections, and
+ *  sections are organised horizontally and separated by black bars.
+ */
 footer {
 	display: flex;
 	text-align: center;
@@ -79,11 +99,16 @@ footer > section + section {
 	border-left: 1px solid black;
 }
 
+/* Force the main content to exist
+ */
 main {
-	background: #aaaaff;
+	background: #aaaaff; /*TODO use some real colors */
 	min-height: 500px;
 }
 
+/* Create a nice cart
+ * Elements are arranged vertically and colored according to their parity.
+ */
 #panier {
 	display: flex;
 	flex-direction: column;
@@ -100,10 +125,10 @@ main {
 	border-top: 1px solid black;
 }
 #panier li:nth-child(odd) {
-	background: #ddaaff;
+	background: #ddaaff; /*TODO use some real colors */
 }
 #panier li:hover {
-	background: #ddddff;
+	background: #ddddff; /*TODO use some real colors */
 }
 #panier li figure {
 	flex: 3;
@@ -113,6 +138,11 @@ main {
 	flex: 1;
 }
 
+/* Create a nice form
+ * The form is arranged in pairs label-field.
+ * Pairs are arranged vertically and colored according to their parity.
+ * On desktop, pairs are displayed on a single line and scale well.
+ */
 #formulaire form {
 	display: flex;
 	flex-direction: column;
@@ -124,7 +154,7 @@ main {
 	align-items: center;
 }
 #formulaire span:nth-child(odd) {
-	background: #ddaaff;
+	background: #ddaaff; /*TODO use some real colors */
 }
 #formulaire label {
 	flex: 1;
@@ -136,6 +166,10 @@ main {
 	flex: 2;
 }
 
+/* Creates nice figures
+ * Figures are atomic units that represent an image and its caption.
+ * Both are centered inside their container.
+ */
 figure {
 	display: flex;
 	flex-direction: column;
@@ -148,7 +182,16 @@ figure img {
 	max-width: calc(400px - 3%);
 }
 
+/* Small viewport rules
+ * This is used when the window is resized to a really small size.
+ * This is also enforced when in phone mode.
+ * Changes the layout of the website entirely.
+ */
 @media (max-width: 500px) {
+	/* Change footer layout
+	 * Sections are now organised vertically.
+	 * Sections are now 100% wide.
+	 */
 	footer {
 		flex-direction: column;
 		padding: 0;
@@ -162,6 +205,12 @@ figure img {
 		border-top: 1px solid black;
 	}
 	
+	/* Change menu layout
+	 * Menu is now vertical.
+	 * Menu items are now 100% wide.
+	 * TODO make the menu appear when clicked and disappear otherwise
+	 * TODO use a nice transition, BECAUSE I CAN
+	 */
 	#menu, #menu ul {
 		flex-direction: column;
 		padding: 0;
@@ -183,10 +232,16 @@ figure img {
 		margin: 5px 0;
 	}
 	
+	/* Change cart item layout
+	 * Cart items are now vertical.
+	 */
 	#panier li {
 		flex-direction: column;
 	}
 	
+	/* Change form layout
+	 * Everything is now vertical.
+	 */
 	#formulaire span {
 		flex-direction: column;
 		width: 100%;
