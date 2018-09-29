@@ -208,9 +208,21 @@ figure img {
 	/* Change menu layout
 	 * Menu is now vertical.
 	 * Menu items are now 100% wide.
-	 * TODO make the menu appear when clicked and disappear otherwise
-	 * TODO use a nice transition, BECAUSE I CAN
+	 * Menu is now animated on mobile.
 	 */
+	#menu {
+		/*FIXME find something less hacky */
+		transition: max-height 1s ease-out;
+		max-height: 20px;
+	}
+	#menu::before {
+		content: "Menu";
+		text-align: center;
+		height: 20px;
+	}
+	#menu:hover {
+		max-height: 1000px;
+	}
 	#menu, #menu ul {
 		flex-direction: column;
 		padding: 0;
