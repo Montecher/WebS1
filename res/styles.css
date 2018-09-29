@@ -73,7 +73,8 @@ header, footer {
 	outline: none;
 }
 #menu input[type=search]:focus {
-	border: 1px solid blue;
+	box-shadow: 0 0 5px dodgerblue;
+	border-color: dodgerblue;
 }
 
 /* Create a nice footer
