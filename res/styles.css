@@ -131,10 +131,10 @@ main {
 #panier li:hover {
 	background: #ddddff; /*TODO use some real colors */
 }
-#panier li figure {
+#panier li > figure {
 	flex: 3;
 }
-#panier li input {
+#panier li > a {
 	max-width: 80px;
 	flex: 1;
 }
