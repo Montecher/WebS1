@@ -29,6 +29,14 @@ h1 {
 h2 {
 	font-size: 12pt;
 }
+p {
+	padding: 5px 7px;
+	text-align: justify;
+	margin-bottom: 10px;
+}
+p a {
+	font-size: italic;
+}
 
 /* Set document size and base layout */
 body > div {
