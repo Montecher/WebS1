@@ -23,7 +23,7 @@ h2 {
 	font-size: 12pt;
 }
 
-body > section {
+body > div {
 	display: flex;
 	flex-direction: column;
 	width: 100%;
@@ -79,7 +79,7 @@ footer > section + section {
 	border-left: 1px solid black;
 }
 
-#main {
+main {
 	background: #aaaaff;
 	min-height: 500px;
 }
