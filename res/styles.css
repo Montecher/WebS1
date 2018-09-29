@@ -170,6 +170,11 @@ figure img {
 		border-left: none;
 		border-top: 1px solid black;
 	}
+	#menu a {
+		display: block;
+		width: 100%;
+		height: 100%;
+	}
 	#menu form {
 		width: 100%;
 	}
