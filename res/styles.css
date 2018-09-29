@@ -87,7 +87,7 @@ footer > section + section {
 #panier {
 	display: flex;
 	flex-direction: column;
-	max-width: 600px;
+	max-width: 1000px;
 }
 #panier li {
 	display: flex;
@@ -116,7 +116,7 @@ footer > section + section {
 #formulaire form {
 	display: flex;
 	flex-direction: column;
-	max-width: 600px;
+	max-width: 1000px;
 	align-content: stretch;
 }
 #formulaire span {
