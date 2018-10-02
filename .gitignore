@@ -3,3 +3,7 @@
 
 # Kate swap files
 .*.kate-swp
+
+# Everything node.js related
+node_modules
+package-lock.json
