@@ -5,7 +5,7 @@ Projet Web du S1.
 Faire un site maquette en binôme.
 - Ce site doit être une maquette de site marchand.  
 - Le site sera totalement statique: pas de PHP ou de JS.  
-- Il devra être rendu au plus tard en décembre
+- Il devra être rendu au plus tard en décembre  
 [Lien](https://perso.liris.cnrs.fr/pierre-antoine.champin/enseignement/intro-web/projet.html) vers les consignes plus détaillées du projet  
 
 ## Distribution des tâches
