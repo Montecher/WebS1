@@ -136,6 +136,9 @@ main {
   background: #aaaaff;
   min-height: 500px;
 }
+main .reasonablesize {
+  max-width: 1000px;
+}
 /* Create a nice cart
  * Elements are arranged vertically and colored according to their parity.
  */
@@ -233,6 +236,7 @@ small.hidden:target {
 a.hidden {
   color: inherit;
   font-style: inherit;
+  cursor: default;
 }
 /* Small viewport rules
  * This is used when the window is resized to a really small size.
