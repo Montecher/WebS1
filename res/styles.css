@@ -284,7 +284,7 @@ a.hidden {
     border-top: 1px solid black;
   }
   #menu a {
-    display: black;
+    display: block;
     width: 100%;
     height: 100%;
   }
@@ -308,7 +308,7 @@ a.hidden {
     flex-direction: column;
     width: 100%;
   }
-  #formulaire labe:::after {
+  #formulaire labe::after {
     content: "";
   }
   #formulaire input,
