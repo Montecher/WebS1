@@ -136,8 +136,55 @@ main {
   background: #aaaaff;
   min-height: 500px;
 }
-main .reasonablesize {
+/* Define what is a "reasonable size"
+ */
+.reasonablesize {
   max-width: 1000px;
+}
+/* create articles
+ */
+#article {
+  max-width: 1000px;
+}
+#article .addtocart {
+  display: block;
+  width: 100%;
+  text-align: center;
+}
+#article .addtocart::after {
+  content: " (" attr(data-price) "€)";
+  font-weight: bold;
+}
+#article #comments form {
+  display: flex;
+  flex-direction: column;
+  padding: 5px;
+}
+#article #comments form > span {
+  display: flex;
+  flex-direction: row;
+}
+#article #comments form > span:nth-child(even) {
+  background: #aaff22;
+}
+#article #comments form > span:nth-child(odd) {
+  background: #22ffaa;
+}
+#article #comments form > span > label {
+  flex: 1;
+}
+#article #comments form > span > label::after {
+  content: ":";
+}
+#article #comments form > span > input,
+#article #comments form > span select,
+#article #comments form > span textarea {
+  flex: 3;
+}
+#article #comments form > span > span {
+  display: flex;
+  flex: 3;
+  align-items: flex-end;
 }
 /* Create a nice cart
  * Elements are arranged vertically and colored according to their parity.
