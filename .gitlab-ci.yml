@@ -1,0 +1,6 @@
+# added so that it does commit
+image: codinget/webs1
+
+test:
+  script:
+   - ./test/htmlcheck.sh
