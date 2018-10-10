@@ -63,9 +63,16 @@ ol.text {
   list-style-type: decimal;
 }
 /* Set document size and base layout */
+html,
+body {
+  display: flex;
+  flex-direction: column;
+  height: 100%;
+}
 body > div {
   display: flex;
   flex-direction: column;
+  flex: 1;
   width: 100%;
 }
 header,
@@ -134,7 +141,7 @@ footer > section + section {
  */
 main {
   background: #aaaaff;
-  min-height: 500px;
+  flex: 1;
 }
 main .reasonablesize {
   max-width: 1000px;
