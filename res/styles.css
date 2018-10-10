@@ -194,6 +194,9 @@ main {
   flex: 3;
   align-items: flex-end;
 }
+#article #comments ul {
+  /*TODO do something */
+}
 /* Create a nice cart
  * Elements are arranged vertically and colored according to their parity.
  */
