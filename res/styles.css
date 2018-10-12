@@ -1,8 +1,8 @@
 @font-face {
-  font-family: 'Open Sans';
+  font-family: 'Noto Sans';
   font-style: normal;
   font-weight: 700;
-  src: local('Open Sans Bold'), local('OpenSans-Bold'), url(https://fonts.gstatic.com/s/opensans/v15/mem5YaGs126MiZpBA-UN7rgOUuhs.ttf) format('truetype');
+  src: local('Noto Sans Bold'), local('NotoSans-Bold'), url(https://fonts.gstatic.com/s/notosans/v7/o-0NIpQlx3QUlC5A4PNjXhFVZNyE.ttf) format('truetype');
 }
 /* Remove all default margins and paddings
  * This is important, because margins and paddings vary.
@@ -30,7 +30,7 @@ h4,
 h5,
 h6 {
   text-align: center;
-  font-family: 'Open Sans';
+  font-family: 'Noto Sans';
 }
 h1 {
   font-size: 14pt;
