@@ -348,6 +348,13 @@ a.hidden {
  * Changes the layout of the website entirely.
  */
 @media (max-width: 500px) {
+	
+	/* Force page width to be 500ox
+	 */
+	html, body, body > * {
+		width: 500px;
+	}
+	
 	/* Change footer layout
 	 * Sections are now organised vertically.
 	 * Sections are now 100% wide.
