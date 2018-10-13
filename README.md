@@ -1,4 +1,7 @@
 # WebS1
+[![pipeline status](https://forge.univ-lyon1.fr/Montecher/WebS1/badges/master/pipeline.svg)](https://forge.univ-lyon1.fr/Montecher/WebS1/commits/master)
+
+
 Projet Web du S1.
 
 ## But
