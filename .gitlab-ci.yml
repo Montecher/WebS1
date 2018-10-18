@@ -18,6 +18,7 @@ build:
 
 test:
   stage: test
-  script:
+  before_script:
    - ./test/unpack.sh
+  script:
    - ./test/htmlcheck.sh
