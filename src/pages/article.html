@@ -1,94 +1,49 @@
-<!DOCTYPE html>
-<html lang="fr">
-<head>
-	<title>Generic Shop</title>
-	<meta charset="utf-8" />
-	<meta name="viewport" content="width=500" />
-	<link rel="stylesheet" type="text/css" href="res/styles.css" />
-</head>
-<body>
+<h1>Fregona</h1>
+<figure>
+	<a href="assets/Classic-Mop.png"><img src="assets/Classic-Mop.png" alt="placeholder image" />
+		</a><figcaption>Fregona</figcaption>
+</figure>
+<a href="javascript:alert('vous avez ajouté cet article à votre panier')" class="addtocart" data-price="20">Ajouter au panier</a>
 
-	<header>
-		<h1>Generic Shop</h1>
-	</header>
+<section id="specs">
+	<h2>Caractéristiques:</h2>
+	<p>
+		Magnifique balais à frange en plastique rouge qui vous permet de faire le ménage avec une facilité déconcertante. Vous ne voudrez plus jamais utiliser autre chose. Fini le balai et la serpillère, maintenant ayez le réflexe balai brosse ! De plus s'il devient usée, des rechanges existent pour une maison toujours plus propre !<sup><a href="#cond1">1</a></sup>
+	</p>
+</section>
 
-	<div>
-		<nav id="menu">
-			<ul>
-				<li><a href="index.html">Accueil</a></li>
-				<li><a href="panier.html">Mon panier</a></li>
-			</ul>
-			<form action="ma_recherche.html"><input type="search" name="q" placeholder="Rechercher" /></form>
-		</nav>
-		<main>
-			
-			<section id="article">
-				<h1>Fregona</h1>
-				<figure>
-					<a href="assets/Classic-Mop.png"><img src="assets/Classic-Mop.png" alt="placeholder image" />
-						</a><figcaption>Fregona</figcaption>
-				</figure>
-				<a href="javascript:alert('vous avez ajouté cet article à votre panier')" class="addtocart" data-price="20">Ajouter au panier</a>
-				
-				<section id="specs">
-					<h2>Caractéristiques:</h2>
-					<p>
-						Magnifique balais à frange en plastique rouge qui vous permet de faire le ménage avec une facilité déconcertante. Vous ne voudrez plus jamais utiliser autre chose. Fini le balai et la serpillère, maintenant ayez le réflexe balai brosse ! De plus s'il devient usée, des rechanges existent pour une maison toujours plus propre !<sup><a href="#cond1">1</a></sup>
-					</p>
-				</section>
-				
-				<section id="comments">
-					<h2>Commentaires:</h2>
-					<form>
-						<span>
-							<label for="utcommentaire">Nom</label>
-							<input type="text" name="utcommentaire" id="utcommentaire" placeholder="Martin Matin" required />
-						</span>
-						<span>
-							<label>Note</label>
-							<span>
-								<label for="note1">1</label><input name="note" id="note1" type="radio" value="1" required />
-								<label for="note2">2</label><input name="note" id="note2" type="radio" value="2" required />
-								<label for="note3">3</label><input name="note" id="note3" type="radio" value="3" required />
-								<label for="note4">4</label><input name="note" id="note4" type="radio" value="4" required />
-								<label for="note5">5</label><input name="note" id="note5" type="radio" value="3" required />
-							</span>
-						</span>
-						<span><label for="commentaire">Commentaire</label></span>
-						<span><textarea placeholder="Tapez ici" id="commentaire" required></textarea></span>
-						<span><input type="submit" name="poster" value="poster commentaire" /></span>
-					</form>
-					<ul>
-						<li>
-							<h3>Jean-Philippe: 	&#x2605; &#x2605; &#x2605; &#x2605; &#x2605;</h3>
+<section id="comments">
+	<h2>Commentaires:</h2>
+	<form>
+		<span>
+			<label for="utcommentaire">Nom</label>
+			<input type="text" name="utcommentaire" id="utcommentaire" placeholder="Martin Matin" required />
+		</span>
+		<span>
+			<label>Note</label>
+			<span>
+				<label for="note1">1</label><input name="note" id="note1" type="radio" value="1" required />
+				<label for="note2">2</label><input name="note" id="note2" type="radio" value="2" required />
+				<label for="note3">3</label><input name="note" id="note3" type="radio" value="3" required />
+				<label for="note4">4</label><input name="note" id="note4" type="radio" value="4" required />
+				<label for="note5">5</label><input name="note" id="note5" type="radio" value="3" required />
+			</span>
+		</span>
+		<span><label for="commentaire">Commentaire</label></span>
+		<span><textarea placeholder="Tapez ici" id="commentaire" required></textarea></span>
+		<span><input type="submit" name="poster" value="poster commentaire" /></span>
+	</form>
+	<ul>
+		<li>
+			<h3>Jean-Philippe: 	&#x2605; &#x2605; &#x2605; &#x2605; &#x2605;</h3>
 
-							Bon produit et livraison rapide
-						</li>
-						<li>
-							<h3>Jean-Kévin:		&#x2605; &#x2606; &#x2606; &#x2606; &#x2606;</h3>
+			Bon produit et livraison rapide
+		</li>
+		<li>
+			<h3>Jean-Kévin:		&#x2605; &#x2606; &#x2606; &#x2606; &#x2606;</h3>
 
-							Livréson trop longue et produi pas aussi beau que sur la photo, il a cassé aprè que je l'ai secoué car il mettai du temps a démaré
-						</li>
-					</ul>
-				</section>
-			</section>
-
-			<small id="cond1" class="hidden">seau et rechanges non fournis</small>
-
-		</main>
-	</div>
-
-	<footer>
-		<section>
-			<h2>Mentions légales</h2>
-			<a href="nous_contacter.html">Nous contacter</a>
-			<span>SARL Generic Shop</span>
-		</section>
-		<section>
-			<h2>Autres informations</h2>
-			<a href="a_propos.html">À propos de nous</a>
-		</section>
-	</footer>
-
-</body>
-</html>
+			Livréson trop longue et produi pas aussi beau que sur la photo, il a cassé aprè que je l'ai secoué car il mettai du temps a démaré
+		</li>
+	</ul>
+</section>
+<small id="cond1" class="hidden">seau et rechanges non fournis</small>
