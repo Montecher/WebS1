@@ -1,4 +1,4 @@
 #!/bin/sh
 mkdir -p out
 cp -a assets out/
-zip assets.zip out
+zip -r assets.zip out

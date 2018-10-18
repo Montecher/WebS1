@@ -1,3 +1,3 @@
 #!/bin/sh
 lessc src/styles.less out/res/styles.css
-zip css.zip out
+zip -r css.zip out

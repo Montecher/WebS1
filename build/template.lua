@@ -25,4 +25,4 @@ for i, page in ipairs(pages) do
 end
 
 -- create the zip
-os.execute('zip pages.zip out')
+os.execute('zip -r pages.zip out')
