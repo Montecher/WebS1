@@ -3,14 +3,38 @@ image: codinget/webs1
 
 stages:
  - build
+ - package
  - test
 
-build:
+build-css:
   stage: build
   script:
    - ./build/css.sh
+  artifacts:
+    paths:
+      - "css.zip"
+
+build-template:
+  stage: build
+  before_script:
+   - git clone https://github.com/natnat-mc/luaxml.git
+  script:
    - ./build/template.lua
+  artifacts:
+    paths:
+     - "pages.zip"
+
+build-assets:
+  stage: build
+  script:
    - ./build/assets.sh
+  artifacts:
+    paths:
+      - "assets.zip"
+
+package:
+  stage: package
+  script:
    - ./build/zip.sh
   artifacts:
     paths:

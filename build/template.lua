@@ -1,12 +1,14 @@
 #!/usr/bin/env lua
 
+local xml=require 'luaxml.xml'
+
 --BEGIN variables
 local indir='src/pages'
 local outdir='out'
 --END variables
 
 -- create output directory
-io.popen('mkdir -p out')
+os.execute('mkdir -p out')
 
 -- list all pages
 local pages={}
@@ -19,5 +21,8 @@ io.write(#pages.." pages found\n")
 for i, page in ipairs(pages) do
 	io.write(page..'\n')
 	--FIXME use actual templates
-	io.popen('cp "'..indir..'/'..page..'" "'..outdir..'"')
+	os.execute('cp "'..indir..'/'..page..'" "'..outdir..'"')
 end
+
+-- create the zip
+os.execute('zip pages.zip out')
