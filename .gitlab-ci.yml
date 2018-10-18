@@ -6,6 +6,7 @@ stages:
  - test
 
 build:
+  stage: build
   script:
    - ./build/css.sh
    - ./build/template.lua
@@ -16,6 +17,7 @@ build:
       - "out.zip"
 
 test:
+  stage: test
   script:
    - ./test/unpack.sh
    - ./test/htmlcheck.sh
