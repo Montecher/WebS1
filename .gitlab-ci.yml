@@ -1,6 +1,10 @@
 # added so that it does commit
 image: codinget/webs1
 
+stages:
+ - build
+ - test
+
 build:
   script:
    - ./build/css.sh
