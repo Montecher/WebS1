@@ -1,2 +1,2 @@
 #!/bin/sh
-java -jar /vnu.jar --verbose --also-check-css *.html res/styles.css
+java -jar /vnu.jar --verbose --also-check-css out/*.html out/res/styles.css

@@ -1,6 +1,16 @@
 # added so that it does commit
 image: codinget/webs1
 
+build:
+  script:
+   - ./build/css.sh
+   - ./build/template.lua
+   - ./build/assets.sh
+   - ./build/zip.sh
+  artifacts:
+    paths:
+      - "out.zip"
+
 test:
   script:
    - ./test/htmlcheck.sh

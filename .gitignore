@@ -10,3 +10,4 @@ package-lock.json
 
 # Build files
 out/
+out.zip
