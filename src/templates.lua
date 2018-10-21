@@ -45,4 +45,10 @@ pages["panier.html"].template='base'
 pages["panier.html"].values={}
 pages["panier.html"].values.title="Mon panier"
 
+-- lipsum test page
+pages["lipsum.html"]={}
+pages["lipsum.html"].template='base'
+pages["lipsum.html"].values={}
+pages["lipsum.html"].values.title="Lorem ipsum"
+
 return {templates=templates, pages=pages}
