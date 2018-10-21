@@ -1,41 +1,101 @@
 
 // sizes
 @headerheight: 50px;
-@menuminheight: 50px;
-@menumaxheight: 1000px;
+@menuminheight: 40px;
+@menumaxheight: 140px;
 
 // fill all the screen
 html, body {
-	min-height: 100%;
 	display: flex;
 	flex-direction: column;
 	flex: 1;
-}
-body > div {
-	margin-top: @headerheight + @menuminheight;
 	
-	display: flex;
-	flex-direction: column;
-	
-	background: #caca00;
+	min-height: 100%;
 }
 
 // make a nice header
 header {
 	position: fixed;
 	top: 0;
-	left: 0;
 	width: 100%;
 	height: @headerheight;
 	
 	text-align: center;
+	font-size: 30px;
+	
+	overflow: hidden;
 	background: @outercolor;
 }
 
-//TODO create a menu
+// make a nice menu
 #menu {
-	display: none;
-	height: 0;
+	display: flex;
+	flex-direction: column;
+	align-items: stretch;
+	
+	position: fixed;
+	top: @headerheight;
+	width: 100%;
+	height: @menuminheight;
+	
+	text-align: center;
+	
+	overflow: hidden;
+	background: @menucolor;
+	
+	transition: height .2s ease-in-out;
+	
+	&::before {
+		display: block;
+		
+		min-height: @menuminheight;
+		max-height: @menuminheight;
+		
+		content: "Menu";
+		
+		font-size: 25px;
+		font-weight: bold;
+		font-family: 'Noto Sans', sans-serif;
+	}
+	
+	ul {
+		display: flex;
+		flex-direction: column;
+		flex: 1;
+		
+		li {
+			font-size: 20px;
+		}
+	}
+	
+	form {
+		display: flex;
+		align-items: stretch;
+		
+		input[type="search"] {
+			margin: 10px;
+			padding-left: 10px;
+			padding-right: 10px;
+			height: 40px;
+			width: 100%;
+			
+			border: 1px solid black;
+			border-radius: 20px;
+			outline: none;
+			
+			font-size: 20px;
+			
+			&:focus {
+				border-color: dodgerblue;
+				box-shadow: 0 0 10px dodgerblue;
+			}
+		}
+	}
+	
+	// grow on hover / click
+	&:hover {
+		height: @menumaxheight;
+	}
 }
 
 //TODO create a footer
@@ -46,6 +106,8 @@ footer {
 //TODO main content
 main {
 	flex: 1;
+	margin-top: @headerheight + @menuminheight;
+	min-height: 100px;
 	
 	background: @innercolor;
 }
