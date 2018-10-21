@@ -1,91 +1,51 @@
 
-/* Change footer layout
- * Sections are now organised vertically.
- * Sections are now 100% wide.
- */
-footer {
+// sizes
+@headerheight: 50px;
+@menuminheight: 50px;
+@menumaxheight: 1000px;
+
+// fill all the screen
+html, body {
+	min-height: 100%;
+	display: flex;
 	flex-direction: column;
-	padding: 0;
+	flex: 1;
+}
+body > div {
+	margin-top: @headerheight + @menuminheight;
 	
-	& > section {
-		width: 100%;
-		padding: 10px 0;
-		
-		& + section {
-			border-left: none;
-			border-top: 1px solid black;
-		}
-	}
+	display: flex;
+	flex-direction: column;
+	
+	background: #caca00;
 }
 
-/* Change menu layout
- * Menu is now vertical.
- * Menu items are now 100% wide.
- * Menu is now animated on mobile.
- */
+// make a nice header
+header {
+	position: fixed;
+	top: 0;
+	left: 0;
+	width: 100%;
+	height: @headerheight;
+	
+	text-align: center;
+	background: @outercolor;
+}
+
+//TODO create a menu
 #menu {
-	transition: max-height 1s ease-out;
-	max-height: 20px;
-	flex-direction: column;
-	padding: 0;
-	
-	&::before {
-		content: "Menu";
-		text-align: center;
-		height: 20px;
-	}
-	
-	&:hover {
-		max-height: @toobig;
-	}
-	
-	ul {
-		flex-direction: column;
-		padding: 0;
-		
-		li + li {
-			border-left: none;
-			border-top: 1px solid black;
-		}
-	}
-	
-	a {
-		display: block;
-		width: 100%;
-		height: 100%;
-	}
-	
-	form {
-		width: 100%;
-		
-		input[type=search] {
-			width: calc(100% - 10px);
-			margin: 5px 0;
-		}
-	}
+	display: none;
+	height: 0;
 }
 
-/* Change cart item layout
- * Cart items are now vertical.
- */
-#panier li {
-	flex-direction: column;
+//TODO create a footer
+footer {
+	background: @outercolor;
 }
 
-/* Change form layout
- * Everything is now vertical.
- */
-#formulaire {
-	span {
-		flex-direction: column;
-		width: 100%;
-	}
+//TODO main content
+main {
+	flex: 1;
 	
-	labe::after {
-		content:"";
-	}
-	
-	input, select {
-		width: 400px;
-	}
+	background: @innercolor;
 }
