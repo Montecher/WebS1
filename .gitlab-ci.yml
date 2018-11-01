@@ -1,4 +1,3 @@
-# added so that it does commit
 image: codinget/webs1
 
 stages:
@@ -16,8 +15,6 @@ build-css:
 
 build-template:
   stage: build
-  before_script:
-   - git clone https://github.com/natnat-mc/luaxml.git
   script:
    - ./build/template.lua
   artifacts:
