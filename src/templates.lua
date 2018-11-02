@@ -42,7 +42,14 @@ local templates={
 					url="assets/Best_boi.jpg",
 					alt="Best boi Lama",
 					id="i2",
-					prev="i1"
+					prev="i1",
+					next="i3"
+				},
+				{
+					url="assets/Serge_Lama.jpg",
+					alt="Serge Lama",
+					id="i3",
+					prev="i2"
 				},
 			},
 			specs=[[Magnifique assortiment de Lama.
