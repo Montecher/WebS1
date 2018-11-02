@@ -9,9 +9,12 @@ local list=require 'src.templates'
 -- create output directory
 os.execute('mkdir -p out')
 
+print()
+
 -- list of templates
 local templates={}
 local function gettpl(name)
+	print("Using template "..name)
 	if not templates[name] then
 		templates[name]=tpl.parse(io.open('src/templates/'..name))
 	end
@@ -21,6 +24,7 @@ end
 -- execute all templates
 for name, data in pairs(list) do
 	local template=gettpl(data.template)
+	print("Rendering page "..name.." with template "..data.template)
 	local html=template:render(data.values)
 	local fd=io.open('out/'..name, 'w')
 	fd:write(html)

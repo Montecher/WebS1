@@ -1,4 +1,6 @@
-return {
+print()
+
+local templates={
 	["article.html"]={
 		template="article.html",
 		values={
@@ -48,3 +50,22 @@ Vous pouvez voir dans la galerie nos modèles d'exposition. En partenaria avec <
 		}
 	}
 }
+
+for line in io.popen('ls -1 src/pages'):lines() do
+	if not templates[line] then
+		local fd=io.open('src/pages/'..line)
+		local html=fd:read '*a'
+		fd:close()
+		local title=html:match("<h1>([^<]+)</h1>")
+		print("Found page "..line.." with"..(title and (" title: "..title) or "out title"))
+		templates[line]={
+			template="base.html",
+			values={
+				title=title,
+				html=html
+			}
+		}
+	end
+end
+
+return templates

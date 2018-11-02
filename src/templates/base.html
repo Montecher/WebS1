@@ -1,6 +1,14 @@
 <html lang="fr">
 <head>
-	<title>Generic Shop - <teplate:var name="title" /></title>
+	<title>
+		<template:code>
+			if values.title then
+				node:settext("Generic Shop - "..values.title)
+			else
+				node:settext "Generic Shop"
+			end
+		</template:code>
+	</title>
 	<meta charset="utf-8" />
 	<meta name="viewport" content="width=500" />
 	<link rel="stylesheet" type="text/css" href="res/styles.css" />
@@ -8,7 +16,15 @@
 <body>
 
 	<header>
-		<h1>Generic Shop - <template:var name="title" /></h1>
+		<h1>
+			<template:code>
+				if values.title then
+					node:settext("Generic Shop - "..values.title)
+				else
+					node:settext "Generic Shop"
+				end
+			</template:code>
+		</h1>
 	</header>
 	<nav id="menu">
 		<ul>
