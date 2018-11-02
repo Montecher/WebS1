@@ -35,12 +35,14 @@ local templates={
 				{
 					url="assets/Lama_(1).png",
 					alt="Lama des montagnes",
+					title="Magnifique Lama des montagnes",
 					id="i1",
 					next="i2"
 				},
 				{
 					url="assets/Best_boi.jpg",
 					alt="Best boi Lama",
+					title="Best boi Lama",
 					id="i2",
 					prev="i1",
 					next="i3"
@@ -48,6 +50,7 @@ local templates={
 				{
 					url="assets/Serge_Lama.jpg",
 					alt="Serge Lama",
+					title="Serge Lama",
 					id="i3",
 					prev="i2"
 				},
