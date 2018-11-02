@@ -3,9 +3,9 @@
 
 @import "styles/vars.less";
 @import "styles/common.less";
-@media screen and (max-width: 500px) {
+@media screen and (max-width: @smallsize) {
 	@import "styles/small.less";
 }
-@media screen and (min-width: 501px) {
+@media screen and (min-width: @smallsize+1) {
 	@import "styles/large.less";
 }
