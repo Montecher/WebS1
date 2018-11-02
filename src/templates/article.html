@@ -23,9 +23,9 @@
 				return type(values.illustration[1])=='table'
 			</template:code>
 			<template:then>
-				<section class="gallery">
+				<div class="gallery">
 					<template:foreach name="illustration">
-						<section>
+						<div>
 							<template:code>
 								node:setproperty('id', values.id)
 							</template:code>
@@ -77,9 +77,9 @@
 									</a>
 								</template:then>
 							</template:if>
-						</section>
+						</div>
 					</template:foreach>
-				</section>
+				</div>
 			</template:then>
 			<template:else within="illustration">
 				<figure>
