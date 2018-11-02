@@ -23,6 +23,10 @@
 				return type(values.illustration[1])=='table'
 			</template:code>
 			<template:then>
+				<!-- At least allow us something like this -->
+				<script>
+					location.href="#i1";	// just target the first element of the gallery
+				</script>
 				<div class="gallery">
 					<template:foreach name="illustration">
 						<div>
