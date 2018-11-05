@@ -1,5 +1,6 @@
 
 @import "rem.less";
+@import "gallery.less";
 
 // base vertical layout
 html, body {
@@ -95,98 +96,5 @@ main {
 	}
 	@media @xlargesize {
 		padding: 0 15%;
-	}
-}
-
-// gallery in pure CSS
-.gallery {
-	background: #000;
-	height: 400px;
-	@media @mediumsize {
-		margin: 0;
-	}
-	@media @largesize {
-		margin: 0 5%;
-	}
-	@media @xlargesize {
-		margin: 0 10%;
-	}
-	
-	text-align: center;
-	vertical-align: middle;
-	
-	& > div {
-		display: none;
-		height: 100%;
-		width: 100%;
-		
-		vertical-align: middle;
-		
-		overflow: hidden;
-		position: relative;	// to allow the figcaption and links to be placed
-		
-		figure {
-			height: 100%;
-			width: 100%;
-			
-			vertical-align: middle;
-			
-			img {
-				max-height: 100%;
-				max-width: 100%;
-			}
-			
-			figcaption {
-				display: block;
-				width: 100%;
-				position: absolute;
-				bottom: 0;
-				padding-bottom: .3rem;
-				padding-top: 3rem;
-				
-				font-size: 1.2rem;
-				
-				color: #fff;
-				box-shadow: inset black 0 -2rem 2rem -1rem;
-				
-				transition: box-shadow .2s;
-				
-				&:hover {
-					box-shadow: inset black 0 -3rem 2rem -1rem;
-				}
-			}
-		}
-		
-		& > a {
-			display: flex;
-			height: 100%;
-			top: 0;
-			position: absolute;
-			align-items: center;
-			
-			&::before {
-				color: #fff;
-				font-size: 6rem;
-			}
-			
-			&.next {
-				right: 0;
-				
-				&::before {
-					content: ">"
-				}
-			}
-			&.prev {
-				left: 0;
-				
-				&::before {
-					content: "<"
-				}
-			}
-		}
-		
-		&:target {
-			display: block;
-		}
 	}
 }
