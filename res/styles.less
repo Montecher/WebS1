@@ -446,3 +446,31 @@ a.hidden {
 		}
 	}
 }
+
+@color0: #fcc;
+@color1: #ccf;
+@obj: section, header, main, footer, div, figure, figcaption, span;
+
+@obj {
+	background: @color0;
+	
+	@obj {
+		background: @color1;
+		
+		@obj {
+			background: @color0;
+			
+			@obj {
+				background: @color1;
+				
+				@obj {
+					background: @color0;
+					
+					@obj {
+						background: @color1;
+					}
+				}
+			}
+		}
+	}
+}

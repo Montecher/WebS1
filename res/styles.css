@@ -30,7 +30,7 @@ h4,
 h5,
 h6 {
   text-align: center;
-  font-family: 'Noto Sans';
+  font-family: 'Noto Sans', sans-serif;
 }
 h1 {
   font-size: 14pt;
@@ -383,5 +383,23 @@ a.hidden {
   #formulaire input,
   #formulaire select {
     width: 400px;
+  }
+}
+@obj {
+  background: #fcc;
+  @obj {
+    background: #ccf;
+    @obj {
+      background: #fcc;
+      @obj {
+        background: #ccf;
+        @obj {
+          background: #fcc;
+          @obj {
+            background: #ccf;
+          }
+        }
+      }
+    }
   }
 }
