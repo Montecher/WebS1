@@ -1,0 +1,98 @@
+
+// create the cart in large mode
+#cart {
+	width: 100%;
+	display: flex;
+	flex-direction: column;
+	align-items: flex-start;
+	justify-items: stretch;
+	
+	overflow: hidden;
+	
+	li {
+		display: flex;
+		flex-direction: row;
+		align-items: stretch;
+		
+		.ab {
+			width: 3rem;
+			display: flex;
+			flex-direction: column;
+			
+			border-radius: 1rem;
+		}
+		
+		.actions {
+			.ab();
+			
+			margin-left: .5rem;
+			
+			background: @oddcolor;
+			
+			.quantity {
+				.ab();
+				
+				height: 3rem;
+				vertical-align: middle;
+				font-size: 2.3rem;
+				
+				&::before {
+					content: attr(data-value);
+				}
+			}
+			
+			.buttons {
+				.ab();
+				
+				align-items: center;
+				
+				background: @evencolor;
+				
+				a {
+					height: 2.4rem;
+					width: 2.4rem;
+					margin: .3rem;
+					vertical-align: middle;
+					font-size: 2rem;
+					
+					border-radius: 1rem;
+					background: @oddcolor;
+					
+					&.remove::before {
+						content: "-";
+					}
+					&.add::before {
+						content: "+";
+					}
+				}
+			}
+		}
+		
+		figure {
+			height: 300px;
+			flex: 1;
+			
+			background: @evencolor;
+			border-radius: 1rem;
+			
+			img {
+				max-height: 100%;
+				max-width: calc(100% - 2rem);
+				
+				border-radius: 2rem;
+				overflow: hidden;
+			}
+		}
+	}
+}
+
+:not(#cart li) > .actions {
+	display: flex;
+	flex-direction: column;
+	
+	li {
+		background: @linkcolor;
+		color: #ffffff;
+		font-size: 2rem;
+	}
+}

@@ -1,20 +1,39 @@
 <h1>Mon panier</h1>
 
-<ul id="panier">
+<ul id="cart">
 	<li>
 		<figure>
 			<a href="article.html"><img src="assets/Classic-Mop.png" alt="placeholder image" />
 				</a><figcaption>placeholder description</figcaption>
 		</figure>
-		<a href="javascript:alert('Vous avez supprimé cet article de votre panier');">Retirer</a>
+		<div class="actions">
+			<span class="quantity" data-value="2"></span>
+			<span class="buttons">
+				<a href="javascript:alert('Vous avez supprimé cet article de votre panier');" class="remove"></a>
+				<a href="javascript:alert('Vous avez ajouté cet article à votre panier');" class="add"></a>
+			</span>
+		</div>
 	</li>
 	<li>
 		<figure>
 			<a href="article2.html"><img src="assets/No.png" alt="placeholder image 2" />
 				</a><figcaption>placeholder description 2</figcaption>
 		</figure>
-		<a href="javascript:alert('Vous avez supprimé cet article de votre panier');">Retirer</a>
+		<div class="actions">
+			<span class="quantity" data-value="3"></span>
+			<span class="buttons">
+				<a href="javascript:alert('Vous avez supprimé cet article de votre panier');" class="remove"></a>
+				<a href="javascript:alert('Vous avez ajouté cet article à votre panier');" class="add"></a>
+			</span>
+		</div>
 	</li>
 </ul>
 
-<a href="ma_commande.html">Confirmer ma commande</a>
+<ul class="actions">
+	<li>
+		<a href="ma_commande.html" class="checkout">Confirmer ma commande</a>
+	</li>
+	<li>
+		<a href="javascript:alert('Vous avez vidé votre panier');" class="reset">Vider mon panier</a>
+	</li>
+</ul>
