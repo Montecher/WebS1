@@ -1,0 +1,209 @@
+<html lang="fr">
+<head>
+	<title>Generic Shop - Buy - <template:var name="title" /></title>
+	<meta charset="utf-8" />
+	<meta name="viewport" content="width=500" />
+	<link rel="stylesheet" type="text/css" href="res/styles.css" />
+</head>
+<body>
+	<header>
+		<h1>Generic Shop - Buy - <template:var name="title" /></h1>
+	</header>
+	<nav id="menu">
+		<ul>
+			<li><a href="index.html">Accueil</a></li>
+			<li><a href="panier.html">Mon panier</a></li>
+		</ul>
+		<form action="ma_recherche.html"><input type="search" name="q" placeholder="Rechercher" /></form>
+	</nav>
+	<main id="article">
+		<h1><template:var name="title" /></h1>
+		<template:if>
+			<template:code>
+				return type(values.illustration[1])=='table'
+			</template:code>
+			<template:then>
+				<!-- At least allow us something like this -->
+				<script>
+					location.href="#i1";	// just target the first element of the gallery
+				</script>
+				<div class="gallery">
+					<template:foreach name="illustration">
+						<div>
+							<template:code>
+								node:setproperty('id', values.id)
+							</template:code>
+							<figure>
+								<template:code>
+									local img=xml.createnode('img')
+									img:setproperty('src', values.url)
+									if values.alt or values.title then
+										img:setproperty('alt', values.alt or values.title)
+									end
+									if values.title then
+										img:setproperty('title', values.title)
+									end
+									local a=xml.createnode('a')
+									a:setproperty('href', values.url)
+									a:appendchild(img)
+									node:appendchild(a)
+								</template:code>
+								<template:if>
+									<template:code>
+										return values.title
+									</template:code>
+									<template:then>
+										<figcaption><template:var name="title" /></figcaption>
+									</template:then>
+								</template:if>
+							</figure>
+							<template:if>
+								<template:code>
+									return values.prev
+								</template:code>
+								<template:then>
+									<a class="prev">
+										<template:code>
+											node:setproperty('href', '#'..values.prev)
+										</template:code>
+									</a>
+								</template:then>
+							</template:if>
+							<template:if>
+								<template:code>
+									return values.next
+								</template:code>
+								<template:then>
+									<a class="next">
+										<template:code>
+											node:setproperty('href', '#'..values.next)
+										</template:code>
+									</a>
+								</template:then>
+							</template:if>
+						</div>
+					</template:foreach>
+				</div>
+			</template:then>
+			<template:else within="illustration">
+				<figure>
+					<template:code>
+						local img=xml.createnode('img')
+						img:setproperty('src', values.url)
+						if values.alt or values.title then
+							img:setproperty('alt', values.alt or values.title)
+						end
+						if values.title then
+							img:setproperty('title', values.title)
+						end
+						local a=xml.createnode('a')
+						a:setproperty('href', values.url)
+						a:appendchild(img)
+						node:appendchild(a)
+					</template:code>
+					<template:if>
+						<template:code>
+							return values.title
+						</template:code>
+						<template:then>
+							<figcaption><template:var name="title" /></figcaption>
+						</template:then>
+					</template:if>
+				</figure>
+			</template:else>
+		</template:if>
+		<a href="javascript:alert('Article ajouté au panier');" class="addtocart">
+			Ajouter au panier
+			<span>
+				<template:code>
+					node:setproperty('data-price', values.price)
+					if values.discount then
+						node:setproperty('data-discount', values.discount)
+					end
+				</template:code>
+			</span>
+		</a>
+		<section id="specs">
+			<h2>Caractéristiques:</h2>
+			<p><template:var name="specs" /></p>
+		</section>
+		<section id="addcomment">
+			<h2>Laisser un commentaire:</h2>
+			<form>
+				<span>
+					<label for="username">Nom</label>
+					<input type="text" id="username" name="username" placeholder="Martin Matin" required />
+				</span>
+				<span>
+					<label>Note</label>
+					<template:code>
+						for i=1,5 do
+							local span=xml.createnode('span')
+							node:appendchild(span)
+							local label=xml.createnode('label')
+							label:setproperty('for', 'r'..i)
+							label:settext(''..i)
+							span:appendchild(label)
+							local input=xml.createnode('input')
+							input:setproperty('type', 'radio')
+							input:setproperty('id', 'r'..i)
+							input:setproperty('name', 'rating')
+							input:setproperty('value', i)
+							input:setproperty('required', true)
+							if i==5 then
+								input:setproperty('checked', true)
+							end
+							span:appendchild(input)
+						end
+					</template:code>
+				</span>
+				<span>
+					<label for="commenttext">Commentaire</label>
+					<textarea id="commenttext" name="commenttext" placeholder="Tapez ici..." required></textarea>
+				</span>
+				<span>
+					<input type="submit" value="Poster commentaire" />
+				</span>
+			</form>
+		</section>
+		<template:if>
+			<template:code>
+				return type(values.comments)=='table' and #values.comments>0
+			</template:code>
+			<template:then>
+				<section id="comments">
+					<h2>Commentaires:</h2>
+					<template:foreach name="comments">
+						<section>
+							<h3>
+								<template:var name="username" />
+								<template:code>
+									node:setproperty('data-rating', values.rating)
+								</template:code>
+							</h3>
+							<p><template:var name="comment" /></p>
+						</section>
+					</template:foreach>
+				</section>
+			</template:then>
+			<template:else>
+				<section id="nocomments">
+					<h2>Pas de commentaires</h2>
+					<p>Pas de commentaires, nous vous invitons à <em>en laisser un</em></p>
+				</section>
+			</template:else>
+		</template:if>
+	</main>
+	<footer>
+		<section>
+			<h2>Mentions légales</h2>
+			<a href="nous_contacter.html">Nous contacter</a>
+			<span>SARL Generic Shop</span>
+		</section>
+		<section>
+			<h2>Autres informations</h2>
+			<a href="a_propos.html">À propos de nous</a>
+		</section>
+	</footer>
+</body>
+</html>

@@ -1,6 +1,45 @@
-# added so that it does commit
 image: codinget/webs1
 
+stages:
+ - build
+ - package
+ - test
+
+build-css:
+  stage: build
+  script:
+   - ./build/css.sh
+  artifacts:
+    paths:
+      - "css.zip"
+
+build-template:
+  stage: build
+  script:
+   - ./build/template.lua
+  artifacts:
+    paths:
+     - "pages.zip"
+
+build-assets:
+  stage: build
+  script:
+   - ./build/assets.sh
+  artifacts:
+    paths:
+      - "assets.zip"
+
+package:
+  stage: package
+  script:
+   - ./build/zip.sh
+  artifacts:
+    paths:
+      - "out.zip"
+
 test:
+  stage: test
+  before_script:
+   - ./test/unpack.sh
   script:
    - ./test/htmlcheck.sh
