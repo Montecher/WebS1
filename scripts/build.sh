@@ -14,5 +14,5 @@ if ! lua -l luatpl -e "print 'found tpl lib'" 2>/dev/null; then
 	(cd modules && git clone https://github.com/natnat-mc/luatpl.git)
 fi
 
+rm -rf out
 build/assets.sh && build/template.lua && build/css.sh
-cp scripts/rebuild.php out
