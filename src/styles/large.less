@@ -1,0 +1,19 @@
+// menu is horizontal
+#menu {
+	display: flex;
+	flex-direction: row;
+	justify-content: space-between;
+	align-items: stretch;
+	
+	ul {
+		display: flex;
+		flex-direction: row;
+		
+		li {
+			
+			& + li {
+				border-left: 1px solid;
+			}
+		}
+	}
+}

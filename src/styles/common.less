@@ -21,4 +21,65 @@ time, mark, audio, video {
 	vertical-align: baseline;
 	list-style-type: none;
 	text-decoration: none;
+	color: inherit;
+}
+
+// header that stays on top
+header {
+	width: 100%;
+	top: 0;
+	position: sticky;
+	background: @outercolor;
+	z-index: @infinity;
+	
+	h1 {
+		text-align: center;
+	}
+	
+	#menu {
+		background: @menucolor;
+		
+		li {
+			color: @menucolor2;
+			border-color: @menucolor2;
+			vertical-align: middle;
+			display: block;
+			padding: 0;
+			margin: 0 1rem;
+			
+			a {
+				display: block;
+				height: 100%;
+				width: 100%;
+				vertical-align: middle;
+				font-size: 1.6rem;
+			}
+		}
+		
+		form {
+			padding: .5rem;
+			
+			input {
+				width: 100%;
+				height: 100%;
+				
+				border: 1px solid @searchcolor;
+				border-radius: @toobig;
+				
+				outline: none;
+				padding: .5rem;
+				
+				&:focus {
+					box-shadow: 0 0 .5rem .3rem @searchcolor;
+				}
+			}
+		}
+	}
+}
+
+// footer
+footer {
+	width: 100%;
+	bottom: 0;
+	background: @outercolor;
 }
