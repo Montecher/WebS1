@@ -1,0 +1,40 @@
+// menu is now vertical and expands itself
+#menu {
+	flex-direction: column;
+	justify-items: center;
+	
+	max-height: 4.3rem;
+	overflow: hidden;
+	
+	transition: max-height .5s;
+	
+	&::before {
+		display: block;
+		
+		content: 'Menu';
+		font-size: 2.75rem;
+		text-align: center;
+		padding: .5rem 0;
+	}
+	
+	&:hover, &:focus-within {
+		max-height: @toobig;
+	}
+	
+	ul {
+		flex-direction: column;
+	}
+}
+
+
+// footer is now purely vertical
+footer {
+	flex-direction: column;
+	align-items: center;
+	
+	section {
+		& + section {
+			border-top: 1px solid;
+		}
+	}
+}

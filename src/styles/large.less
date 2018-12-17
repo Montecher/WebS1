@@ -11,9 +11,20 @@
 		
 		li {
 			
+			padding: 0 1rem;
+			
 			& + li {
 				border-left: 1px solid;
 			}
+		}
+	}
+}
+
+// footer is horizontal then vertical
+footer {
+	section {
+		& + section {
+			border-left: 1px solid;
 		}
 	}
 }
