@@ -15,3 +15,7 @@ Faire un site maquette en binôme.
 ## Distribution des tâches
 Nathan Décher s'occupe du CSS et du flexbox du site  
 Thomas Montero s'occupe du html, des formulaires et du contenu du site  
+
+## Accéder au site
+Le site web est disponible à l'adresse <http://genshop.tk> pour la branche `master` et <http://staging.genshop.tk> pour la branche `staging`.
+
