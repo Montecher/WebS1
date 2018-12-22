@@ -1,0 +1,39 @@
+h2 {
+	display: block;
+	width: 100%;
+	text-align: center;
+	font-size: 3rem;
+	margin-bottom: 1rem;
+}
+
+h3 {
+	display: block;
+	width: 100%;
+	text-align: center;
+	font-size: 2.5rem;
+	margin-bottom: .7rem;
+}
+
+.addtocart {
+	display: block;
+	width: 100%;
+	text-align: center;
+	font-size: 1.5rem;
+	
+	&::after {
+		padding-left: .2rem;
+		content: attr(data-price) ' €';
+	}
+	
+	&::before {
+		display: block;
+		height: 4rem;
+		width: 100%;
+		
+		content: '';
+		background-image: url("../assets/icons/Shopping_cart.svg");
+		background-repeat: no-repeat;
+		background-size: contain;
+		background-position: center center;
+	}
+}
