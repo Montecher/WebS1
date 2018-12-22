@@ -37,3 +37,59 @@ h3 {
 		background-position: center center;
 	}
 }
+
+#caract {
+	display: block;
+	width: 80%;
+	padding: 0 10%;
+	
+	p {
+		font-size: 1.3rem;
+		text-align: justify;
+	}
+	
+	a {
+		color: blue;
+	}
+	
+	sup {
+		vertical-align: super;
+		
+		&.cond {
+			color: blue;
+			position: relative;	//to allow positioning of the info bubble
+			
+			&:hover::before {
+				position: absolute;
+				bottom: 0;
+				right: 0;
+				display: block;
+				content: attr(data-condition);
+				min-width: 10rem;
+				text-align: center;
+				background-color: white;
+				border: 1px solid silver;
+				border-radius: 2px;
+				color: black;
+			}
+		}
+	}
+}
+
+#commentsection {
+	display: block;
+	width: 80%;
+	padding: 0 10%;
+	
+	p:only-child {
+		display: block;
+		width: 100%;
+		text-align: center;
+		font-size: 1.6em;
+		color: #444;
+		
+		em {
+			font-style: italic;
+		}
+	}
+}
