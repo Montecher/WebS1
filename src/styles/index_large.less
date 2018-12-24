@@ -1,0 +1,25 @@
+@import "index.less";
+
+main {
+	display: flex;
+	flex-wrap: wrap;
+	justify-content: center;
+	align-content: center;
+
+	.art {
+		max-width: 800px;
+		min-width: 400px;
+		max-height: 470px;
+		display: flex;
+		flex-wrap: nowrap;
+
+		.left {
+			display: flex;
+			flex-direction: column;
+
+			img {
+				max-width: 400px;
+			}
+		}
+	}
+}
