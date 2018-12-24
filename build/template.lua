@@ -26,7 +26,7 @@ for name, data in pairs(list) do
 	local template=gettpl(data.template)
 	print("Rendering page "..name.." with template "..data.template)
 	local out=template:apply(data.values)
-	out:queryselector('main'):setproperty('id', name:gsub('%.html', ''):gsub('%.', '_'))
+	out:queryselector('body'):setproperty('id', name:gsub('%.html', ''):gsub('%.', '_'))
 	local html=out:dump(true, true)
 	local fd=io.open('out/'..name, 'w')
 	fd:write(html)
