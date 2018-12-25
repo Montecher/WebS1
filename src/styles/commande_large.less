@@ -1,0 +1,94 @@
+h2 {
+	text-align: center;
+}
+
+#panier {
+	width: 80%;
+	padding: 0 10%;
+	
+	display: flex;
+	flex-direction: column;
+	
+	h3 {
+		padding-left: 5rem;
+	}
+	
+	section {
+		padding-bottom: 2rem;
+		
+		h4 {
+			padding-left: 10rem;
+		}
+		figure {
+			display: flex;
+			flex-direction: row;
+			height: 200px;
+			
+			&:nth-child(odd) {
+				background-color: #ddd;
+			}
+			& + figure {
+				border-top: 1px solid black;
+			}
+			
+			img {
+				max-width: 200px;
+			}
+			figcaption {
+				font-size: 2rem;
+				padding: .5rem;
+				
+				&::after {
+					font-size: 1.5rem;
+					content: ' x' attr(data-count);
+				}
+			}
+		}
+		span {
+			font-size: 1.5rem;
+			padding-left: 2rem;
+			&::after {
+				font-size: 1.2rem;
+				color: gray;
+				content: ' ' attr(data-price) '€';
+			}
+		}
+	}
+	
+	& > span {
+		font-size: 1.5rem;
+		padding-left: 1rem;
+		&::after {
+			font-size: 1.2rem;
+			color: gray;
+			content: ' ' attr(data-price) '€';
+		}
+	}
+}
+
+#coordonnees {
+	width: 80%;
+	padding: 0 10%;
+	
+	h3 {
+		padding-left: 5rem;
+	}
+	form {
+		display: flex;
+		flex-direction: column;
+		span {
+			display: flex;
+			flex-direction: row;
+			align-items: center;
+			align-content: center;
+			
+			label {
+				flex: 1;
+				font-size: 1.2rem;
+			}
+			* {
+				flex: 3;
+			}
+		}
+	}
+}
