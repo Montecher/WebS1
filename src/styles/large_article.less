@@ -94,10 +94,43 @@ h3 {
 	}
 }
 
+main form {
+	width: 100%;
+	display: flex;
+	flex-direction: column;
+	
+	span {
+		display: flex;
+		flex-direction: row;
+		
+		span {
+			flex: 3;
+			display: block;
+		}
+		label {
+			flex: 1;
+			
+			&:only-child {
+				text-align: center;
+			}
+		}
+		input {
+			flex: 3;
+		}
+		select {
+			flex: 3;
+		}
+		textarea {
+			flex: 1;
+		}
+	}
+}
+
 #commentsection {
 	display: block;
 	width: 80%;
 	padding: 0 10%;
+	margin-bottom: 2rem;
 	
 	p:only-child {
 		display: block;
@@ -108,6 +141,24 @@ h3 {
 		
 		em {
 			font-style: italic;
+		}
+	}
+	
+	.comment {
+		width: 100%;
+		padding: 1rem 0;
+		
+		h4 {
+			text-align: center;
+			
+			&::after {
+				content: ' 'attr(data-score)'/5';
+				font-style: italic;
+			}
+		}
+		p {
+			text-align: justify;
+			font-size: 1.3rem;
 		}
 	}
 }
