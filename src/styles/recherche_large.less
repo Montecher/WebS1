@@ -11,6 +11,7 @@ h1 {
 	margin-right: 20%;
 	margin-left: 10%;
 	.mainbox();
+	overflow: hidden;
 	
 	.result {
 		
@@ -18,7 +19,7 @@ h1 {
 			border-top: 1px solid black;
 		}
 		
-		&:nth-child(even) {
+		&:nth-child(odd) {
 			background-color: @boxcolorodd;
 		}
 		
@@ -37,6 +38,8 @@ h1 {
 				display: flex;
 				flex-direction: column;
 				align-items: flex-end;
+				padding-right: 1rem;
+				padding-top: .5rem;
 				
 				.name {
 					font-size: 2rem;
