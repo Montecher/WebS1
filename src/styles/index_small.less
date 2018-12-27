@@ -1,10 +1,12 @@
+/*--- index small ---*/
 main {
-	padding: 50px;
+	padding: 30px;
 }
 
 .wrapper {
 	display: flex;
 	flex-wrap: wrap;
+	flex-direction: column;
 	justify-content: center;
 	align-content: center;
 	align-items: stretch;
@@ -12,21 +14,22 @@ main {
 	width: 100%;
 
 	.art {
-		max-width: 800px;
-		min-width: 400px;
-		max-height: 470px;
+		max-width: 500px;
+		min-width: 250px;
+		// max-height: 470px;
 		display: flex;
+		flex-direction: column;
 		flex-wrap: nowrap;
 
 		.left {
 			display: flex;
 			flex-direction: column;
-			width: 50%;
+			// width: 50%;
 			// min-width: 250px;
 			// max-width: 400px;
 
 			img {
-				max-width: 400px;
+				max-width: 100%;
 			}
 		}
 
