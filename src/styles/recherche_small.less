@@ -16,7 +16,7 @@ h1 {
 		}
 		
 		&:nth-child(even) {
-			background-color: #ddd;
+			background-color: @boxcolorodd;
 		}
 		
 		a {
@@ -48,7 +48,7 @@ h1 {
 				}
 				.discount {
 					font-size: 1.5rem;
-					color: gray;
+					opacity: .5;
 					
 					&::before {
 						content: '-';

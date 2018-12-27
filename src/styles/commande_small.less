@@ -24,7 +24,7 @@ h2 {
 			height: 200px;
 			
 			&:nth-child(odd) {
-				background-color: #ddd;
+				background-color: @boxcolorodd;
 			}
 			& + figure {
 				border-top: 1px solid black;
@@ -48,7 +48,7 @@ h2 {
 			padding-left: 2rem;
 			&::after {
 				font-size: 1.2rem;
-				color: gray;
+				opacity: .5;
 				content: ' ' attr(data-price) '€';
 			}
 		}
@@ -59,14 +59,15 @@ h2 {
 		padding-left: 1rem;
 		&::after {
 			font-size: 1.2rem;
-			color: gray;
+			opacity: .5;
 			content: ' ' attr(data-price) '€';
 		}
 	}
 }
 
 #coordonnees {
-	width: 100%;
+	width: 75%;
+	margin: 0 12.5%;
 	padding: 1rem 0;
 	
 	h3 {
