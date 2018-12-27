@@ -16,11 +16,12 @@ h3 {
 
 #images {
 	width: 80%;
-	padding: 0 10%;
+	margin: 0 10%;
 	max-height: 500px;
 	display: flex;
 	align-items: center;
 	flex-direction: column;
+	.mainbox();
 	
 	img {
 		max-height: calc(500px - 3rem);
@@ -37,6 +38,7 @@ h3 {
 	width: 100%;
 	text-align: center;
 	font-size: 1.5rem;
+	margin: 1rem 0;
 	
 	&::after {
 		padding-left: .2rem;
@@ -63,22 +65,25 @@ h3 {
 #caract {
 	display: block;
 	width: 80%;
-	padding: 0 10%;
+	margin: 0 10%;
+	padding: 1rem 0;
+	.mainbox();
 	
 	p {
 		font-size: 1.3rem;
 		text-align: justify;
+		padding: 0 1rem;
 	}
 	
 	a {
-		color: blue;
+		.link();
 	}
 	
 	sup {
 		vertical-align: super;
 		
 		&.cond {
-			color: blue;
+			.link();
 			position: relative;	//to allow positioning of the info bubble
 			
 			&:hover::before {
@@ -99,9 +104,10 @@ h3 {
 }
 
 main form {
-	width: 100%;
+	width: calc(100% - 2rem);
 	display: flex;
 	flex-direction: column;
+	padding: 0 1rem;
 	
 	span {
 		display: flex;
@@ -134,8 +140,9 @@ main form {
 #commentsection {
 	display: block;
 	width: 80%;
-	padding: 0 10%;
+	margin: 2rem 10%;
 	margin-bottom: 2rem;
+	.mainbox();
 	
 	p:only-child {
 		display: block;
@@ -150,8 +157,8 @@ main form {
 	}
 	
 	.comment {
-		width: 100%;
-		padding: 1rem 0;
+		width: calc(100% - 2rem);
+		padding: 1rem;
 		
 		h4 {
 			text-align: center;

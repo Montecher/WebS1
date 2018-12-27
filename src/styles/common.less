@@ -57,6 +57,7 @@ html, body {
 }
 main {
 	flex: 1;
+	background: @maincolor;
 }
 
 // header that stays on top
@@ -64,11 +65,12 @@ header {
 	width: 100%;
 	top: 0;
 	position: sticky;
-	background: @outercolor;
+	background: @headercolor;
 	z-index: @infinity;
 	
 	h1 {
 		text-align: center;
+		color: @grain;
 	}
 	
 	#menu {
@@ -117,7 +119,7 @@ header {
 footer {
 	flex-shrink: 0;
 	width: 100%;
-	background: @outercolor;
+	background: @footercolor;
 	display: flex;
 	justify-items: stretch;
 	align-items: stretch;
@@ -131,12 +133,28 @@ footer {
 		align-items: center;
 		justify-content: center;
 		padding: .2rem;
-		border-color: @outercolor2;
+		border-color: @footercolor2;
 		
 		h2 {
-			color: @outercolor2;
+			color: @grain;
 		}
 	}
+}
+
+// helper classes
+.mainbox {
+	background-color: @boxcolor;
+	border-color: @boxcolor2;
+	border-radius: 1rem;
+	overflow: hidden;
+}
+.link {
+	font-style: italic;
+	color: @linkcolor;
+}
+.highlight {
+	font-weight: bold;
+	color: @highlightcolor;
 }
 
 // hidden links
