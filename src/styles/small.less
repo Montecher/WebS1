@@ -1,137 +1,68 @@
-
-// sizes
-@headerheight: 50px;
-@menuminheight: 40px;
-@menumaxheight: 140px;
-
-// fill all the screen
-html, body {
-	display: flex;
-	flex-direction: column;
-	flex: 1;
-	
-	min-height: 100%;
-}
-
-// make a nice header
-header {
-	position: fixed;
-	top: 0;
-	width: 100%;
-	height: @headerheight;
-	
-	text-align: center;
-	font-size: 30px;
-	
-	overflow: hidden;
-	background: @outercolor;
-}
-
-// make a nice menu
+// menu is now vertical and expands itself
 #menu {
-	display: flex;
 	flex-direction: column;
-	align-items: stretch;
+	justify-items: center;
 	
-	position: fixed;
-	top: @headerheight;
-	width: 100%;
-	height: @menuminheight;
-	
-	text-align: center;
-	
+	max-height: 4.3rem;
 	overflow: hidden;
-	background: @menucolor;
 	
-	transition: height .2s ease-in-out;
+	transition: max-height .5s;
 	
 	&::before {
 		display: block;
 		
-		min-height: @menuminheight;
-		max-height: @menuminheight;
-		
-		content: "Menu";
-		
-		font-size: 25px;
-		font-weight: bold;
-		font-family: 'Noto Sans', sans-serif;
+		content: 'Menu';
+		font-size: 2.75rem;
+		text-align: center;
+		padding: .5rem 0;
+	}
+	
+	&:hover, &:focus-within {
+		max-height: @toobig;
 	}
 	
 	ul {
-		display: flex;
 		flex-direction: column;
-		flex: 1;
-		
-		li {
-			font-size: 20px;
-		}
-	}
-	
-	form {
-		display: flex;
-		align-items: stretch;
-		
-		input[type="search"] {
-			margin: 10px;
-			padding-left: 10px;
-			padding-right: 10px;
-			height: 40px;
-			width: 100%;
-			
-			border: 1px solid black;
-			border-radius: 20px;
-			outline: none;
-			
-			font-size: 20px;
-			
-			&:focus {
-				border-color: dodgerblue;
-				box-shadow: 0 0 10px dodgerblue;
-			}
-		}
-	}
-	
-	// grow on hover / click
-	&:hover {
-		height: @menumaxheight;
 	}
 }
 
-//TODO create a footer
+
+// footer is now purely vertical
 footer {
-	display: flex;
 	flex-direction: column;
 	align-items: center;
 	
-	text-align: center;
-	
-	background: @outercolor;
-	
 	section {
-		display: flex;
-		flex-direction: column;
-		
-		padding: 10px;
-		
 		& + section {
-			border-top: 1px solid darken(@outercolor, 15);
-		}
-		
-		h2 {
-			font-size: 20px;
+			border-top: 1px solid;
 		}
 	}
 }
 
-//TODO main content
-main {
-	flex: 1;
-	margin-top: @headerheight + @menuminheight;
-	min-height: 100px;
-	max-width: @smallsize;
-	
-	overflow: hidden;
-	
-	background: @innercolor;
+body#ma_recherche {
+	@import "recherche_small.less";
+}
+
+body#panier {
+	@import "panier_small.less";
+}
+
+body#commande {
+	@import "commande_small.less";
+}
+
+body#article1, body#article2, body#article3 {
+	@import "article_small.less";
+}
+
+body#nous_contacter {
+	@import "contact_small.less";
+}
+
+body#a_propos {
+	@import "apropos_small.less";
+}
+
+body#index {
+	@import "index_small.less";
 }

@@ -18,38 +18,147 @@ time, mark, audio, video {
 	border: 0;
 	font-size: 100%;
 	font: inherit;
+	color: inherit;
 	vertical-align: baseline;
 	list-style-type: none;
 	text-decoration: none;
 }
 
-/* Redefine default styles for common elements
- * The default values are either ugly or don't work for our purpose.
- */
-a {
-	color: @linkcolor;
-}
+// consistent headings
 h1, h2, h3, h4, h5, h6 {
 	font-weight: bold;
-	font-family: 'Noto Sans', sans-serif;
 }
-p{
-	text-align: justify;
-	
-	a {
-		font-style: italic;
-	}
+h1 {
+	font-size: 3rem;
 }
-small {
-	opacity: .7;
+h2 {
+	font-size: 2.75rem;
+}
+h3 {
+	font-size: 2.5rem;
+}
+h4 {
+	font-size: 2.25rem;
+}
+h5 {
+	font-size: 2rem;
+}
+h6 {
+	font-size: 1.75rem;
 }
 
-/* Define text class
- * This is used to flag objects to be displayed as text
- */
-ul.text {
-	list-style-type: disc;
+// page takes up 100% of the allocated space
+html, body {
+	height: 100%;
+	width: 100%;
+	display: flex;
+	flex-direction: column;
+	flex: 1;
 }
-ol.text {
-	list-style-type: decimal;
+main {
+	flex: 1;
+	background: @maincolor;
+}
+
+// header that stays on top
+header {
+	width: 100%;
+	top: 0;
+	position: sticky;
+	background: @headercolor;
+	z-index: @infinity;
+	
+	h1 {
+		text-align: center;
+		color: @grain;
+	}
+	
+	#menu {
+		background: @menucolor;
+		
+		li {
+			color: @menucolor2;
+			border-color: @menucolor2;
+			vertical-align: middle;
+			display: block;
+			padding: 0;
+			
+			a {
+				display: block;
+				height: 100%;
+				width: 100%;
+				display: flex;
+				align-items: center;
+				justify-content: center;
+				font-size: 1.6rem;
+			}
+		}
+		
+		form {
+			padding: .5rem;
+			
+			input {
+				width: 100%;
+				height: 100%;
+				
+				border: 1px solid @searchcolor;
+				border-radius: @toobig;
+				
+				outline: none;
+				padding: .5rem;
+				
+				&:focus {
+					box-shadow: 0 0 .5rem .3rem @searchcolor;
+				}
+			}
+		}
+	}
+}
+
+// footer
+footer {
+	flex-shrink: 0;
+	width: 100%;
+	background: @footercolor;
+	display: flex;
+	justify-items: stretch;
+	align-items: stretch;
+	box-sizing: border-box;
+	padding: .5rem;
+	
+	section {
+		flex: 1;
+		display: flex;
+		flex-direction: column;
+		align-items: center;
+		justify-content: center;
+		padding: .2rem;
+		border-color: @footercolor2;
+		
+		h2 {
+			color: @grain;
+		}
+	}
+}
+
+// helper classes
+.mainbox {
+	background-color: @boxcolor;
+	border-color: @boxcolor2;
+	border-radius: 1rem;
+}
+.link {
+	font-style: italic;
+	color: @linkcolor;
+}
+.highlight {
+	font-weight: bold;
+	color: @highlightcolor;
+}
+
+// hidden links
+a.hidden {
+	// !important for specificity reasons
+	cursor: default !important;
+	color: inherit !important;
 }

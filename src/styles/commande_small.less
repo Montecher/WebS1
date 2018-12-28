@@ -1,0 +1,97 @@
+h2 {
+	text-align: center;
+}
+
+#panier {
+	width: 100%;
+	
+	display: flex;
+	flex-direction: column;
+	
+	h3 {
+		padding-left: 5rem;
+	}
+	
+	section {
+		padding-bottom: 2rem;
+		
+		h4 {
+			padding-left: 10rem;
+		}
+		figure {
+			display: flex;
+			flex-direction: row;
+			height: 200px;
+			
+			&:nth-child(odd) {
+				background-color: @boxcolorodd;
+			}
+			& + figure {
+				border-top: 1px solid black;
+			}
+			
+			img {
+				max-width: 200px;
+			}
+			figcaption {
+				font-size: 2rem;
+				padding: .5rem;
+				
+				&::after {
+					font-size: 1.5rem;
+					content: ' x' attr(data-count);
+				}
+			}
+		}
+		span {
+			font-size: 1.5rem;
+			padding-left: 2rem;
+			&::after {
+				font-size: 1.2rem;
+				opacity: .5;
+				content: ' ' attr(data-price) '€';
+			}
+		}
+	}
+	
+	& > span {
+		font-size: 1.5rem;
+		padding-left: 1rem;
+		&::after {
+			font-size: 1.2rem;
+			opacity: .5;
+			content: ' ' attr(data-price) '€';
+		}
+	}
+}
+
+#coordonnees {
+	width: 75%;
+	margin: 0 12.5%;
+	padding: 1rem 0;
+	
+	h3 {
+		text-align: center;
+	}
+	form {
+		display: flex;
+		flex-direction: column;
+		
+		span {
+			display: flex;
+			flex-direction: column;
+			align-items: stretch;
+			align-content: stretch;
+			padding: 0 1%;
+			
+			label {
+				flex: 1;
+				font-size: 1.2rem;
+				text-align: center;
+			}
+			* {
+				flex: 3;
+			}
+		}
+	}
+}

@@ -1,0 +1,63 @@
+h1 {
+	text-align: center;
+}
+
+#recherche {
+	display: flex;
+	flex-direction: column;
+	align-items: stretch; 
+	align-content: stretch;
+	width: 100%;
+	
+	.result {
+		
+		& + div {
+			border-top: 1px solid black;
+		}
+		
+		&:nth-child(even) {
+			background-color: @boxcolorodd;
+		}
+		
+		a {
+			display: block;
+			width: 100%;
+			max-height: 200px;
+			
+			img {
+				float: left;
+				max-width: 200px;
+			}
+			
+			.details {
+				float: right;
+				display: flex;
+				flex-direction: column;
+				align-items: flex-end;
+				padding: 1rem;
+				
+				.name {
+					font-size: 2rem;
+				}
+				.price {
+					font-size: 1.5rem;
+					
+					&::after {
+						content: "€";
+					}
+				}
+				.discount {
+					font-size: 1.5rem;
+					opacity: .5;
+					
+					&::before {
+						content: '-';
+					}
+					&::after {
+						content: '%';
+					}
+				}
+			}
+		}
+	}
+}

@@ -1,11 +1,27 @@
 @import url('https://fonts.googleapis.com/css?family=Noto+Sans:700');
 
-
+// define all required variables
 @import "styles/vars.less";
+
+// make REM's work
+@import "styles/rem.less";
+
+// add all the global rules
 @import "styles/common.less";
+
+// add the gallery
+@import "styles/gallery.less";
+
+#index {
+	@import "styles/index.less";
+}
+
+// add small rules
 @media screen and (max-width: @smallsize) {
 	@import "styles/small.less";
 }
+
+// add large rules
 @media screen and (min-width: @smallsize+1) {
 	@import "styles/large.less";
 }

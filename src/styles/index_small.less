@@ -1,0 +1,40 @@
+/*--- index small ---*/
+main {
+	padding: 30px;
+}
+
+.wrapper {
+	display: flex;
+	flex-wrap: wrap;
+	flex-direction: column;
+	justify-content: center;
+	align-content: center;
+	align-items: stretch;
+	height: 100%;
+	width: 100%;
+
+	.art {
+		max-width: 500px;
+		min-width: 250px;
+		// max-height: 470px;
+		display: flex;
+		flex-direction: column;
+		flex-wrap: nowrap;
+
+		.left {
+			display: flex;
+			flex-direction: column;
+			// width: 50%;
+			// min-width: 250px;
+			// max-width: 400px;
+
+			img {
+				max-width: 100%;
+			}
+		}
+
+		p {
+			// max-width: 400px;
+		}
+	}
+}
