@@ -16,6 +16,17 @@ Faire un site maquette en binôme.
 Nathan Décher s'occupe du CSS et du flexbox du site  
 Thomas Montero s'occupe du html, des formulaires et du contenu du site  
 
+## Construire le site
+Pour construire le site, il faut les outils suivants:
+- `linux`, `freeBSD` ou `cygwin`
+- `lua` 5.1 ou 5.3
+- `git`
+- `zip`
+- `nodejs` avec le module `less` installé globalement
+
+Ensuite, la construction est un simple appel à `./scripts/build.sh` qui va créer le site web dans le dossier `out`.  
+La construction du site **ne préserve pas** l'indentation et les commentaires.  
+
 ## Accéder au site
 Le site web est disponible à l'adresse <http://genshop.tk> pour la branche `master` et <http://staging.genshop.tk> pour la branche `staging`.
 
