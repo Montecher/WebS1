@@ -16,10 +16,22 @@ Faire un site maquette en binôme.
 Nathan Décher s'occupe du CSS et du flexbox du site  
 Thomas Montero s'occupe du html, des formulaires et du contenu du site  
 
+## Organisation des dossiers
+- `src`: fichiers sources
+	- `pages`: sources des pages
+	- `styles`: feuilles de styles
+	- `templates`: templates utilisés pour la construction du site
+	- `styles.less`: point d'entrée des styles
+- `assets`: images utilisées
+	- `icons`: icones
+- `build`: scripts de construction
+- `scripts`: scripts généraux
+- `test`: scripts de test
+
 ## Construire le site
 Pour construire le site, il faut les outils suivants:
 - `linux`, `freeBSD` ou `cygwin`
-- `lua` 5.1 ou 5.3
+- `lua` 5.1 ou 5.3; modules `luaxml` et `luatpl` installés automatiquement si absents
 - `git`
 - `zip`
 - `nodejs` avec le module `less` installé globalement
