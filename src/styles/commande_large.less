@@ -21,19 +21,24 @@ h2 {
 		h4 {
 			padding-left: 10rem;
 		}
+		
+		a:last-of-type {
+			figure {
+				border-bottom: 1px solid black;
+			}
+		}
+		
+		a:nth-child(even) {
+			figure {
+				background-color: @boxcolorodd;
+			}
+		}
+		
 		figure {
 			display: flex;
 			flex-direction: row;
 			height: 200px;
 			border-top: 1px solid black;
-			
-			&:nth-child(even) {
-				background-color: @boxcolorodd;
-			}
-			
-			&:last-of-type {
-				border-bottom: 1px solid black;
-			}
 			
 			img {
 				max-width: 200px;
