@@ -40,5 +40,6 @@ Ensuite, la construction est un simple appel à `./scripts/build.sh` qui va cré
 La construction du site **ne préserve pas** l'indentation et les commentaires.  
 
 ## Accéder au site
-Le site web est disponible à l'adresse <http://genshop.tk> pour la branche `master` et <http://staging.genshop.tk> pour la branche `staging`.
+~~Le site web est disponible à l'adresse <http://genshop.tk> pour la branche `master` et <http://staging.genshop.tk> pour la branche `staging`.~~  
+Le domaine ayant expiré, le site est désormais accessible sur <https://genshop.s.codinget.me>
 
